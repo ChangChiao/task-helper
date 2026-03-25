@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: task-helper-socket
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: AUTH_SECRET
+        sync: false
+      - key: CORS_ORIGIN
+        sync: false
